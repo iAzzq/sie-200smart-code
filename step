@@ -1,0 +1,67 @@
+
+LDN    SM0.0
+LPS
+A      SM0.0
+A      SM0.0
+MOVB   0, VB102
+LRD
+A      V100.0
+A      SM0.0
+MOVB   1, VB102
+LRD
+A      V100.1
+A      SM0.0
+MOVB   2, VB102
+LRD
+A      V100.2
+A      SM0.0
+MOVB   3, VB102
+LRD
+A      V100.3
+A      SM0.0
+MOVB   4, VB102
+LRD
+A      V100.4
+A      SM0.0
+MOVB   5, VB102
+LRD
+A      V100.5
+A      SM0.0
+MOVB   6, VB102
+LRD
+A      V100.6
+A      SM0.0
+MOVB   7, VB102
+LRD
+A      V100.7
+A      SM0.0
+MOVB   8, VB102
+LRD
+A      V101.0
+A      SM0.0
+MOVB   9, VB102
+LRD
+A      V101.1
+A      SM0.0
+MOVB   10, VB102
+LRD
+A      V101.2
+A      SM0.0
+MOVB   11, VB102
+LRD
+A      V101.3
+A      SM0.0
+MOVB   12, VB102
+LRD
+A      V101.4
+A      SM0.0
+MOVB   13, VB102
+LRD
+A      V101.5
+A      SM0.0
+MOVB   14, VB102
+LPP
+DECO   VB102, VW100
+AENO
+SWAP   VW100
+
