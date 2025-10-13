@@ -1,0 +1,37 @@
+
+
+----HSC0_INIT
+
+LD     Always_On
+MOVB   16#F8, HSC0_Ctrl            //置位控制位： 加计数； 速率 4X； 已启用； 
+MOVD   +0, HSC0_CV                 //
+MOVD   +2147483647, HSC0_PV        //装载 CV
+HDEF   0, 9                        //装载 PV
+=      这里可以使用中断来进行
+ATCH   INT_0, 12
+ENI
+HSC    0
+
+
+
+-----main
+
+LD     First_Scan_On
+CALL   HSC0_INIT
+
+
+
+LD     Always_On
+DTR    HSC0_CV, AC0
+AENO
+/R     400.0, AC0
+AENO
+MOVR   3.14, AC2
+AENO
+*R     10.0, AC2
+AENO
+MOVR   AC0, VD0
+*R     AC2, VD0
+
+
+
