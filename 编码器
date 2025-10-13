@@ -1,0 +1,36 @@
+--------------------main
+
+LD     First_Scan_On
+MOVB   2#11100100, HSC0_Ctrl
+HDEF   0, 9
+MOVD   0, HSC0_CV
+HSC    0
+
+LD     Always_On
+ATCH   INT_0, 21
+ENI
+
+
+LD     Always_On
+TON    T32, 200
+
+
+---------------INT_0
+
+LD     Always_On
+R      T32, 1
+
+                                  //vd0内单位为   转/每分钟   
+LD     Always_On
+LPS
+DTR    HC0, AC0
+AENO
+/R     400.0, AC0
+LPP
+MOVR   AC0, VD0
+*R     60.0, VD0
+
+
+                                  //不使用这段可以记长度
+LD     Always_On
+HSC    0
